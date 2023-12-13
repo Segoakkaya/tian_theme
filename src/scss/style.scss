@@ -1,0 +1,86 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    transition: 0.3s ease-in-out;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 10px;
+        height: 100%;
+        background-color: #e2e2e2;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #8B5CF6;
+        border-radius: 7px;
+    }
+    font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+background-image: url('./assets/img/Hero.png');
+background-position: center;
+background-size: 100%;
+object-fit: cover;
+background-repeat: no-repeat;
+background-position: top;
+background-color: #F5F5F5;
+}
+.container-fluid{
+    padding: 40px 128px;
+}
+.courses-container{
+    padding: 128px 120px; 
+}
+.about-container{
+    padding: 168px 365px;
+}
+.blog-container{
+    padding: 160px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+.footer-container{
+    padding: 100px 150px;
+}
+@media (max-width:1366px) { }
+@include media-breakpoint-down(lg)  { }
+@include media-breakpoint-down(md)  {
+    body{
+        background-image: none;
+    }
+    .container-fluid{
+        padding: 40px 80px; 
+    }
+    .courses-container{
+        padding: 120px 48px; 
+    }
+    .about-container{
+        padding: 168px 80px;
+    }
+    .blog-container{
+        padding: 160px 80px;
+    }
+    .footer-container{
+        padding: 100px 80px;
+    }
+}
+@include media-breakpoint-down(sm)  {
+    .container-fluid{
+        padding: 40px 15px;  
+    }
+    
+    .courses-container{
+        padding: 120px 15px; 
+    }
+    .about-container{
+        padding: 168px 15px;
+    }
+    
+    .blog-container{
+        padding: 160px 15px;
+    }
+    .footer-container{
+        padding: 50px 15px;
+    }
+}
+@include media-breakpoint-down(def) { }
